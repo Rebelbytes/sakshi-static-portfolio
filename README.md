@@ -1,6 +1,6 @@
 # Sakshi Kadam — Portfolio
 
-A responsive, art-directed portfolio with a Node.js serverless API, configured for Vercel. The palette combines charcoal, cool grey, and blush pink; the featured-work carousel links each project to its public GitHub repository.
+A responsive, art-directed portfolio with a Node.js serverless API, configured for Vercel. The palette combines charcoal, cool grey, and blush pink; the compact project carousel links to each repository and supports swipe and arrow navigation.
 
 ## Run locally
 
@@ -13,7 +13,7 @@ npx vercel dev
 This starts Vercel's local development server, including:
 
 - `/api/health` for the Node.js runtime indicator.
-- `/api/projects` to load selected public repositories from the `Rebelbytes` GitHub account. GitHub data is cached at Vercel's edge; the portfolio keeps a curated local project index available if GitHub cannot be reached.
+- `/api/projects` to load metadata for the featured GitHub repositories. Project cards link to each repository's README; SafeRide also links to its IEEE Xplore paper and DOI. GitHub metadata is cached at Vercel's edge, and curated project details remain available if GitHub cannot be reached.
 
 ## Deploy to Vercel
 
@@ -28,5 +28,4 @@ The page is served as a static asset. Both API routes are deployed as Node.js se
 ## Before publishing
 
 - Replace the supplied profile image and resume in `assets/` if needed.
-- Add a LinkedIn profile link when you have the URL.
-- Update the featured repository list and project descriptions in `api/projects.js` when your GitHub projects change.
+- Update the featured repository list and project descriptions in `api/projects.js` and `index.html` when your projects change.
