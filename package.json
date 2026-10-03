@@ -1,0 +1,11 @@
+{
+  "name": "sakshi-kadam-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "deploy": "npx vercel --prod"
+  }
+}
